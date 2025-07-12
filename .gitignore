@@ -1,0 +1,13 @@
+# 依赖 & 构建产物
+node_modules
+dist
+build
+
+# 环境变量文件 (非常重要！)
+.env
+.env.local
+
+# 系统 & IDE
+.DS_Store
+.idea
+.vscode 
