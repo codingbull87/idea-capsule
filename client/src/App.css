@@ -1,38 +1,136 @@
+/* === 主应用布局与容器 === */
 .App {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* === 应用头部 === */
+.app-header {
   text-align: center;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--font-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-header .subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 0.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* === 主内容区域 === */
+main {
+  width: 100%;
+}
+
+/* === 想法输入表单 === */
+.capsule-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
+  margin-bottom: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.capsule-form textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-background);
+  box-shadow: 0 2px 4px var(--shadow-color);
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.capsule-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.capsule-form button {
+  align-self: flex-end; /* 按钮靠右 */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.capsule-form button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* === 想法列表 === */
+.capsule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.capsule-item {
+  background-color: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px var(--shadow-color);
+  word-wrap: break-word; /* 确保长单词能换行 */
+}
+
+.capsule-content {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.capsule-date {
+  font-size: 0.85rem;
+  color: #888;
+  text-align: right;
+}
+
+/* === 辅助信息样式 === */
+.empty-message,
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  background-color: var(--card-background);
+  border-radius: 8px;
+}
+
+.error-message {
+  color: #d8000c;
+  background-color: #ffbaba;
+}
+
+/* === 响应式设计 (针对小屏幕设备) === */
+@media (max-width: 768px) {
+  .App {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .app-header {
+    margin-bottom: 2rem;
+  }
+  
+  .capsule-form {
+    margin-bottom: 2rem;
   }
 }
