@@ -23,6 +23,30 @@
       "dest": "/client/static/$1"
     },
     {
+      "src": "/asset-manifest.json",
+      "dest": "/client/asset-manifest.json"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/client/favicon.ico"
+    },
+    {
+      "src": "/logo192.png",
+      "dest": "/client/logo192.png"
+    },
+    {
+      "src": "/logo512.png",
+      "dest": "/client/logo512.png"
+    },
+    {
+      "src": "/manifest.json",
+      "dest": "/client/manifest.json"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/client/robots.txt"
+    },
+    {
       "src": "/(.*)",
       "dest": "/client/index.html"
     }
