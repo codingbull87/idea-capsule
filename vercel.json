@@ -39,10 +39,6 @@
       "dest": "/client/logo512.png"
     },
     {
-      "src": "/manifest.json",
-      "dest": "/client/manifest.json"
-    },
-    {
       "src": "/robots.txt",
       "dest": "/client/robots.txt"
     },
